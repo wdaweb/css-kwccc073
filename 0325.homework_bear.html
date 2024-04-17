@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>熊本熊</title>
+    <style>
+        .face {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            background: black;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        /* 右耳 */
+        .face::before {
+            content: "";
+            display: block;
+            width: 20%;
+            height: 20%;
+            border-radius: 50%;
+            background: black;
+            position: absolute;
+            right: 5%;
+        }
+
+        /* 左耳  */
+        .face::after {
+            content: "";
+            display: block;
+            width: 20%;
+            height: 20%;
+            border-radius: 50%;
+            background: black;
+            position: absolute;
+            left: 5%;
+        }
+
+        /* 左耳(內) */
+        .ears::before {
+            content: "";
+            width: 10%;
+            height: 10%;
+            border-radius: 50%;
+            background: white;
+            z-index: 1;
+            position: absolute;
+            left: 15%;
+            transform: translate(-50%, 50%);
+        }
+
+        /* 右耳(內) */
+        .ears::after {
+            content: "";
+            width: 10%;
+            height: 10%;
+            border-radius: 50%;
+            background: white;
+            position: absolute;
+            right: 5%;
+            transform: translate(-50%, 50%);
+        }
+
+        /* 左眼 */
+        .eyes::before {
+            content: "";
+            width: 20%;
+            height: 20%;
+            border-radius: 50%;
+            background: white;
+            transform-origin: left top;
+            position: absolute;
+            left: 15%;
+            top: 5%;
+            transform: translate(50%, 50%);
+        }
+
+        /* 右眼 */
+        .eyes::after {
+            content: "";
+            width: 20%;
+            height: 20%;
+            border-radius: 50%;
+            background: white;
+            position: absolute;
+            right: 15%;
+            top: 5%;
+            transform: translate(-50%, 50%);
+        }
+
+        /* 左眼(內) */
+        .eyes_black::before {
+            content: "";
+            width: 15%;
+            height: 15%;
+            z-index: 1;
+            border-radius: 50%;
+            background: black;
+            position: absolute;
+            left: 25%;
+            top: 15%;
+            transform: translate(15%, 20%)
+        }
+
+        /* 右眼(內) */
+        .eyes_black::after {
+            content: "";
+            width: 15%;
+            height: 15%;
+            z-index: 1;
+            border-radius: 50%;
+            background: black;
+            position: absolute;
+            right: 25%;
+            top: 15%;
+            transform: translate(-15%, 20%)
+        }
+
+        /* 臉中間圓形 */
+        .nose_mouth {
+            width: 40%;
+            height: 25%;
+            border-radius: 50%;
+            background: white;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%)
+        }
+
+        /* 鼻子 */
+        .nose_mouth:before {
+            content: "";
+            width: 30%;
+            height: 25%;
+            border-radius: 50%;
+            background: black;
+            z-index: 2;
+            position: absolute;
+            left: 50%;
+            top: 5%;
+            /* top: 50%; */
+            transform: translate(-50%)
+        }
+
+        /* 嘴巴 */
+        .nose_mouth::after {
+            content: "";
+            width: 60%;
+            height: 40%;
+            border-radius: 50%;
+            background: black;
+            z-index: 2;
+            position: absolute;
+            left: 50%;
+            bottom: 15%;
+            transform: translate(-50%)
+        }
+
+        /* 左腮紅 */
+        .blush::before {
+            content: "";
+            width: 25%;
+            height: 25%;
+            border-radius: 50%;
+            background: red;
+            position: absolute;
+            top: 50%;
+            transform: translate(-40%, -50%)
+        }
+
+        /* 右腮紅 */
+        .blush::after {
+            content: "";
+            width: 25%;
+            height: 25%;
+            border-radius: 50%;
+            background: red;
+            position: absolute;
+            right: 0;
+            top: 50%;
+            transform: translate(40%, -50%)
+        }
+
+        /* 左邊鬍子 */
+        .beard::before {
+            content: "";
+            width: 10%;
+            height: 10%;
+            transform: skew(50deg);
+            background: white;
+            position: absolute;
+            left: 38%;
+            top: 75%;
+        }
+
+        /* 右邊鬍子 */
+        .beard::after {
+            content: "";
+            width: 10%;
+            height: 10%;
+            transform: skew(-50deg);
+            background: white;
+            position: absolute;
+            right: 38%;
+            top: 75%;
+        }
+    </style>
+    </style>
+
+</head>
+
+<body>
+    <div class="face">
+        <div class="ears"></div>
+        <div class="eyes">
+            <div class="eyes_black"></div>
+        </div>
+        <div class="blush"></div>
+        <div class="nose_mouth"></div>
+        <div class="beard"></div>
+    </div>
+</body>
+
+</html>
